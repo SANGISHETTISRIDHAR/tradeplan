@@ -1,0 +1,38 @@
+import requests
+baseurl="https://www.metaweather.com/api/location/"
+endurl="44418/"
+findurl=baseurl+endurl
+resp=requests.get(findurl)
+print(resp.json())
+
+""" This is the "woeid": 44418 output like below"""
+
+"""
+{'consolidated_weather': 
+            [
+                {'id': 5712183465869312, 'weather_state_name': 'Light Cloud', 'weather_state_abbr': 'lc', 'wind_direction_compass': 'WNW', 'created': '2019-09-13T06:10:02.407896Z', 'applicable_date': '2019-09-13', 'min_temp': 14.785, 'max_temp': 20.475, 'the_temp': 20.425, 'wind_speed': 5.36324551066041, 'wind_direction': 295.5, 'air_pressure': 1031.205, 'humidity': 61, 'visibility': 11.365500477213075, 'predictability': 70},
+                {'id': 5162765679329280, 'weather_state_name': 'Light Cloud', 'weather_state_abbr': 'lc', 'wind_direction_compass': 'ENE', 'created': '2019-09-13T06:10:02.609157Z', 'applicable_date': '2019-09-14', 'min_temp': 11.275, 'max_temp': 21.814999999999998, 'the_temp': 20.055, 'wind_speed': 2.9034913456878493, 'wind_direction': 72.279339464031, 'air_pressure': 1034.1100000000001, 'humidity': 54, 'visibility': 10.719274437286249, 'predictability': 70}, 
+                {'id': 6129854724440064, 'weather_state_name': 'Light Cloud', 'weather_state_abbr': 'lc', 'wind_direction_compass': 'WSW', 'created': '2019-09-13T06:10:02.404999Z', 'applicable_date': '2019-09-15', 'min_temp': 11.375, 'max_temp': 24.11, 'the_temp': 22.63, 'wind_speed': 4.50668592920544, 'wind_direction': 244.15377801417975, 'air_pressure': 1027.78, 'humidity': 54, 'visibility': 14.475463294360932, 'predictability': 70},
+                {'id': 4911369482665984, 'weather_state_name': 'Heavy Cloud', 'weather_state_abbr': 'hc', 'wind_direction_compass': 'WNW', 'created': '2019-09-13T06:10:02.398432Z', 'applicable_date': '2019-09-16', 'min_temp': 13.43, 'max_temp': 22.805, 'the_temp': 20.515, 'wind_speed': 4.214120032132347, 'wind_direction': 298.0732550739479, 'air_pressure': 1022.88, 'humidity': 61, 'visibility': 12.525600493120178, 'predictability': 71}, 
+                {'id': 5374916310335488, 'weather_state_name': 'Light Cloud', 'weather_state_abbr': 'lc', 'wind_direction_compass': 'N', 'created': '2019-09-13T06:10:02.712666Z', 'applicable_date': '2019-09-17', 'min_temp': 13.625, 'max_temp': 20.98, 'the_temp': 18.939999999999998, 'wind_speed': 5.276228778774623, 'wind_direction': 357.1362388551905, 'air_pressure': 1023.97, 'humidity': 61, 'visibility': 15.926675713831225, 'predictability': 70}, 
+                {'id': 4616259461185536, 'weather_state_name': 'Light Cloud', 'weather_state_abbr': 'lc', 'wind_direction_compass': 'E', 'created': '2019-09-13T06:10:04.812266Z', 'applicable_date': '2019-09-18', 'min_temp': 10.8, 'max_temp': 21.28, 'the_temp': 20.11, 'wind_speed': 3.3971896126620535, 'wind_direction': 95.0, 'air_pressure': 1027.0, 'humidity': 52, 'visibility': 9.999726596675416, 'predictability': 70}
+            ], 
+    'time': '2019-09-13T07:16:27.208646+01:00', 'sun_rise': '2019-09-13T06:31:33.648178+01:00', 'sun_set': '2019-09-13T19:20:26.633304+01:00', 'timezone_name': 'LMT', 'parent':
+        {'title': 'England', 'location_type': 'Region / State / Province', 'woeid': 24554868, 'latt_long': '52.883560,-1.974060'}, 
+    'sources': 
+        [
+            {'title': 'BBC', 'slug': 'bbc', 'url': 'http://www.bbc.co.uk/weather/', 'crawl_rate': 360}, 
+            {'title': 'Forecast.io', 'slug': 'forecast-io', 'url': 'http://forecast.io/', 'crawl_rate': 480}, 
+            {'title': 'HAMweather', 'slug': 'hamweather', 'url': 'http://www.hamweather.com/', 'crawl_rate': 360}, 
+            {'title': 'Met Office', 'slug': 'met-office', 'url': 'http://www.metoffice.gov.uk/', 'crawl_rate': 180}, 
+            {'title': 'OpenWeatherMap', 'slug': 'openweathermap', 'url': 'http://openweathermap.org/', 'crawl_rate': 360}, 
+            {'title': 'Weather Underground', 'slug': 'wunderground', 'url': 'https://www.wunderground.com/?apiref=fc30dc3cd224e19b', 'crawl_rate': 720}, 
+            {'title': 'World Weather Online', 'slug': 'world-weather-online', 'url': 'http://www.worldweatheronline.com/', 'crawl_rate': 360}
+        ], 
+    'title': 'London', 'location_type': 'City', 'woeid': 44418, 'latt_long': '51.506321,-0.12714', 'timezone': 'Europe/London'}
+    """
+
+
+
+
+
